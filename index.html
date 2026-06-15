@@ -2,23 +2,91 @@
 <html>
 <head>
     <title>AURA Accessibility Scanner</title>
+
+    <style>
+        body {
+            background-color: #0a1026;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 40px;
+        }
+
+        h1 {
+            color: #4da6ff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        button {
+            background-color: #4da6ff;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2d8cff;
+        }
+
+        #result {
+            margin-top: 20px;
+            border: 1px solid #4da6ff;
+            padding: 20px;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .status {
+            color: #7CFC00;
+            font-weight: bold;
+        }
+    </style>
 </head>
+
 <body>
 
-<h1>AURA Accessibility Scanner</h1>
+<div class="container">
 
-<p>This is a simplified prototype inspired by the AURA application.</p>
+    <h1>AURA</h1>
 
-<button onclick="scan()">Scan Application</button>
+    <h2>The Guardian of Accessibility</h2>
 
-<div id="result"></div>
+    <p>
+        AI-powered accessibility assistant that scans applications
+        and identifies accessibility barriers.
+    </p>
+
+    <button onclick="scan()">Start Scan</button>
+    <button onclick="clarify()">Clarify Content</button>
+
+    <div id="result">
+        <h3>Scanning: Notepad.exe</h3>
+
+        <p class="status">Status: ENFORCING</p>
+
+        <ul>
+            <li>Low color contrast detected</li>
+            <li>Button missing accessibility label</li>
+            <li>Small text size detected</li>
+        </ul>
+    </div>
+
+</div>
 
 <script>
 function scan() {
-    document.getElementById("result").innerHTML =
-    "<h3>Accessibility Issues Found</h3>" +
-    "<p>Low color contrast detected</p>" +
-    "<p>Button missing label</p>";
+    document.getElementById("result").style.display = "block";
+}
+
+function clarify() {
+    alert("AI Clarification: This content has been simplified for easier understanding.");
 }
 </script>
 
