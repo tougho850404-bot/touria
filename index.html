@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AURA Accessibility Scanner</title>
+</head>
+<body>
+
+<h1>AURA Accessibility Scanner</h1>
+
+<p>This is a simplified prototype inspired by the AURA application.</p>
+
+<button onclick="scan()">Scan Application</button>
+
+<div id="result"></div>
+
+<script>
+function scan() {
+    document.getElementById("result").innerHTML =
+    "<h3>Accessibility Issues Found</h3>" +
+    "<p>Low color contrast detected</p>" +
+    "<p>Button missing label</p>";
+}
+</script>
+
+</body>
+</html>
